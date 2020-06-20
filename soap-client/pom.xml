@@ -13,6 +13,14 @@
 
 	<artifactId>soap-client</artifactId>
 
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 	<!-- For generating the client stubs from WSDL web service should be running. -->
 	<build>
 		<plugins>

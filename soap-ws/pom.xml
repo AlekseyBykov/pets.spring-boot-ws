@@ -23,11 +23,6 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-spring-boot-starter-jaxws</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<!-- The service stubs generated from WSDL which should be developed first. -->

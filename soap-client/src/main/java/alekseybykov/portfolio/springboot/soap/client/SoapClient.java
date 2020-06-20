@@ -15,6 +15,8 @@ import java.net.URL;
 import java.util.List;
 
 /**
+ * Also can be used SoapUI.
+ *
  * @author Aleksey Bykov
  * @since 19.06.2020
  */

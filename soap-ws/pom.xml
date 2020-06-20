@@ -30,6 +30,7 @@
 		</dependency>
 	</dependencies>
 
+	<!-- The service stubs generated from WSDL which should be developed first. -->
 	<build>
 		<plugins>
 			<plugin>

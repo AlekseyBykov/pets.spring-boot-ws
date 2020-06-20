@@ -13,6 +13,7 @@
 
 	<artifactId>soap-client</artifactId>
 
+	<!-- For generating the client stubs from WSDL web service should be running. -->
 	<build>
 		<plugins>
 			<plugin>

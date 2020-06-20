@@ -26,6 +26,7 @@ public class SoapWSConfig {
 		Endpoint endpoint = new EndpointImpl(bus, new SoapWS());
 
 		// WSDL is accessed through the URL: http://localhost:8080/soapws/dataservice?wsdl
+		// Should be copied by URL and pass to the appropriate client folder.
 		endpoint.publish("/dataservice");
 		return endpoint;
 	}

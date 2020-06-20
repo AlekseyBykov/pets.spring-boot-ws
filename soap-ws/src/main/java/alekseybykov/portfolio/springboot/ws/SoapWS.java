@@ -21,8 +21,7 @@ public class SoapWS implements DataServicePortType {
 	private Map<BigInteger, Data> dataMap = new HashMap<>();
 
 	/**
-	 * For testing with SoapUI.
-	 * GetDataRequest:
+	 * Will be deserialized to GetDataRequest:
 	 *
 	 * <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:spr="https://spring-boot-soap.alekseybykov.github.io/">
 	 *    <soapenv:Header/>
@@ -33,7 +32,7 @@ public class SoapWS implements DataServicePortType {
 	 *    </soapenv:Body>
 	 * </soapenv:Envelope>
 	 *
-	 * GetDataResponse:
+	 * Will be serialized from GetDataResponse:
 	 *
 	 * <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	 *    <soap:Body>
@@ -55,8 +54,7 @@ public class SoapWS implements DataServicePortType {
 	}
 
 	/**
-	 * For testing with SoapUI.
-	 * CreateDataRequest:
+	 * Will be deserialized to CreateDataRequest:
 	 *
 	 * <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:spr="https://spring-boot-soap.alekseybykov.github.io/">
 	 *    <soapenv:Header/>
@@ -71,7 +69,7 @@ public class SoapWS implements DataServicePortType {
 	 *    </soapenv:Body>
 	 * </soapenv:Envelope>
 	 *
-	 * CreateDataResponse:
+	 * Will be serialized from CreateDataResponse:
 	 *
 	 * <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	 *    <soap:Body>

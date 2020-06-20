@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.springboot.portfolio.alekseybykov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="https://spring-boot-soap.alekseybykov.github.io/" name="SoapWSService" targetNamespace="http://ws.springboot.portfolio.alekseybykov/">
+  <wsdl:import location="http://localhost:8080/soapws/dataservice?wsdl=DataServicePortType.wsdl" namespace="https://spring-boot-soap.alekseybykov.github.io/">
+  </wsdl:import>
+  <wsdl:binding name="SoapWSServiceSoapBinding" type="ns1:DataServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapWSService">
+    <wsdl:port binding="tns:SoapWSServiceSoapBinding" name="SoapWSPort">
+      <soap:address location="http://localhost:8080/soapws/dataservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

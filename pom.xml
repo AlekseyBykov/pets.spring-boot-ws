@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>alekseybykov.portfolio</groupId>
+    <artifactId>spring-boot-ws</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>soap-ws</module>
+        <module>soap-client</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <cxf.version>3.3.6</cxf.version>
+        <cxf-codegen-plugin.version>3.3.0</cxf-codegen-plugin.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <name>spring-boot-ws</name>
+    <description>Example of WSDL-first Web Service with using Apache CXF and Spring Boot</description>
+    <url>https://alekseybykov.github.io</url>
+
+    <developers>
+        <developer>
+            <name>Aleksey Bykov</name>
+            <email>aleksey.n.bykov@gmail.com</email>
+        </developer>
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

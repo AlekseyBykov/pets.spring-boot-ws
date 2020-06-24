@@ -2,6 +2,7 @@ package alekseybykov.portfolio.springboot.ws.config;
 
 import javax.xml.ws.Endpoint;
 
+import alekseybykov.portfolio.springboot.ws.callback.ServiceSideUTPCallback;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
 
@@ -38,7 +39,7 @@ public class SoapWSConfig {
 		Map<String, Object> interceptorProperties = new HashMap<>();
 		interceptorProperties.put(ConfigurationConstants.ACTION, ConfigurationConstants.USERNAME_TOKEN);
 		interceptorProperties.put(ConfigurationConstants.PASSWORD_TYPE, WSConstants.PW_TEXT);
-		interceptorProperties.put(ConfigurationConstants.PW_CALLBACK_CLASS, UsernameTokenPasswordCallback.class.getName());
+		interceptorProperties.put(ConfigurationConstants.PW_CALLBACK_CLASS, ServiceSideUTPCallback.class.getName());
 
 		// For handling incoming messages (requests).
 		WSS4JInInterceptor wssInnerInterceptor = new WSS4JInInterceptor(interceptorProperties);

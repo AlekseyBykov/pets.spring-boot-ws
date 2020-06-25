@@ -3,3 +3,4 @@
 
 soap-ws/target/*
 soap-client/target/*
+mtom-ws/target/*

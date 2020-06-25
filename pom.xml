@@ -19,6 +19,7 @@
     <modules>
         <module>soap-ws</module>
         <module>soap-client</module>
+        <module>mtom-ws</module>
     </modules>
 
     <properties>

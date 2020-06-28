@@ -27,6 +27,7 @@
         <cxf.version>3.3.6</cxf.version>
         <cxf-security.version>3.3.6</cxf-security.version>
         <cxf-codegen-plugin.version>3.3.0</cxf-codegen-plugin.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
         <junit.version>4.12</junit.version>
     </properties>
 
@@ -56,6 +57,11 @@
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-ws-security</artifactId>
                 <version>${cxf-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>

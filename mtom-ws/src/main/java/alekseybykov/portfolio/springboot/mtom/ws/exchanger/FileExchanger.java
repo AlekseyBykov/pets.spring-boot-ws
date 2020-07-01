@@ -15,5 +15,5 @@ public interface FileExchanger {
 
 	void uploadFile(@WebParam(name = "file") FileMapper fileMapper);
 
-	DataHandler downloadFile();
+	DataHandler downloadFile(@WebParam(name = "file") String fileName);
 }

@@ -5,6 +5,7 @@ import alekseybykov.portfolio.springboot.mtom.ws.mapping.FileMapper;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -36,7 +37,12 @@ public class FileExchangerImpl implements FileExchanger {
 	}
 
 	@Override
-	public DataHandler downloadFile() {
-		return null;
+	public DataHandler downloadFile(String fileName) {
+		DataHandler result = null;
+		File file = new File(String.format("%s%s", EXCHANGE_FOLDER_PATH, fileName));
+		if (file.isFile() && file.exists()) {
+			result = new DataHandler(new FileDataSource(file));
+		}
+		return result;
 	}
 }

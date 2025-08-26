@@ -27,7 +27,7 @@
         <cxf.version>3.3.6</cxf.version>
         <cxf-security.version>3.3.6</cxf-security.version>
         <cxf-codegen-plugin.version>3.3.0</cxf-codegen-plugin.version>
-        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
         <junit.version>4.13.1</junit.version>
     </properties>
 
